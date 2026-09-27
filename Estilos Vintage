@@ -1,0 +1,89 @@
+/* Personalización Estilo Papel Antiguo */
+:root {
+--vintage-bg: #d7c4a3;
+--vintage-paper: #e3d2b4;
+--vintage-dark: #2c1d11;
+--vintage-border: #3d2817;
+--vintage-purple: #5c3b7a;
+}
+
+body {
+background-color: var(--vintage-bg);
+background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='400' viewBox='0 0 800 800'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.04' numOctaves='5' result='noise'/%3E%3CfeColorMatrix type='matrix' values='1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 0.15 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' fill='%23d0be9c'/%3E%3C/svg%3E");
+color: var(--vintage-dark);
+font-family: 'Playfair Display', Georgia, serif;
+}
+
+.title-vintage {
+font-family: 'MedievalSharp', 'Playfair Display', serif;
+letter-spacing: 2px;
+}
+
+.font-typewriter {
+font-family: 'Special Elite', monospace;
+}
+
+.vintage-divider {
+display: flex;
+align-items: center;
+text-align: center;
+margin: 15px 0;
+}
+
+.vintage-divider::before,
+.vintage-divider::after {
+content: '';
+flex: 1;
+border-bottom: 2px solid var(--vintage-border);
+}
+
+.vintage-diamond {
+width: 10px;
+height: 10px;
+background-color: var(--vintage-border);
+transform: rotate(45deg);
+margin: 0 10px;
+display: inline-block;
+}
+
+.nav-pill {
+padding: 6px 18px;
+border-radius: 9999px;
+transition: all 0.2s ease;
+font-weight: 600;
+cursor: pointer;
+border: 1px solid transparent;
+}
+
+.nav-pill.active {
+background-color: #a38b6c;
+color: #1f130b;
+box-shadow: inset 0 2px 4px rgba(0,0,0,0.2);
+border-color: var(--vintage-border);
+}
+
+.nav-pill:hover:not(.active) {
+background-color: rgba(61, 40, 23, 0.1);
+}
+
+.paper-container {
+background: rgba(235, 222, 200, 0.85);
+border: 2px solid var(--vintage-border);
+box-shadow: 0 10px 25px rgba(0,0,0,0.15), inset 0 0 80px rgba(139, 90, 43, 0.15);
+}
+
+.vintage-frame {
+border: 3px solid var(--vintage-border);
+box-shadow: 3px 3px 0px rgba(0,0,0,0.2);
+background-color: #e8d9c0;
+}
+
+.purple-frame {
+border: 3px solid var(--vintage-purple);
+box-shadow: 3px 3px 0px rgba(92, 59, 122, 0.3);
+}
+
+.carousel-track {
+display: flex;
+transition: transform 0.4s ease-in-out;
+}
